@@ -1,7 +1,15 @@
 <h1>Orgs</h1>
 <ul>
-  <li>{{link-to 'jQuery' 'org.repos' 'jquery'}}</li>
-  <li>{{link-to 'Ember' 'org.repos' 'ember'}}</li>
-  <li>{{link-to 'Netflix' 'org.repos' 'netflix'}}</li>
+  {{#each model as |org|}}
+    <li>{{link-to org.id 'org' org.id}} <span{{action 'favorite' org.id}}>favorites</span></li>
+  {{/each}}
 </ul>
+
+<ul>
+  {{#each items as |item|}}
+    <li>{{item.id}}</li>
+  {{/each}}
+</ul>
+
+
 {{outlet}}
