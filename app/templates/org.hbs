@@ -1,5 +1,6 @@
 {{link-to 'back' 'orgs'}}
-<h1>Facebook</h1>
-
+{{#each model as |repo|}}
+  <li>{{repo.id}}</li>
+{{/each}}
 
 {{outlet}}
